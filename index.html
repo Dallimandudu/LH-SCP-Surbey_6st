@@ -11,19 +11,19 @@
 <style>
   :root{
     /* 메인 포인트 색상 */
-    --navy: #1e3a8a;       
-    --navy-deep: #0f172a;  
-    --point: #1e3a8a;      
-    --point-soft: #eff6ff; 
-    --point-deep: #1d4ed8; 
-    
+    --navy: #1e3a8a;
+    --navy-deep: #0f172a;
+    --point: #1e3a8a;
+    --point-soft: #eff6ff;
+    --point-deep: #1d4ed8;
+
     /* 텍스트 및 라인 색상 */
-    --ink: #0f172a;        
-    --ink-soft: #475569;   
-    --line: #e2e8f0;       
-    
+    --ink: #0f172a;
+    --ink-soft: #475569;
+    --line: #e2e8f0;
+
     --shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.3);
-    
+
     --serif-kr: 'Noto Serif KR', serif;
     --serif-en: 'Playfair Display', 'Cormorant Garamond', serif;
     --sans: 'PretendardVariable', 'Pretendard', -apple-system, sans-serif;
@@ -36,8 +36,7 @@
     margin:0;
     font-family:var(--sans);
     color:var(--ink);
-    letter-spacing: 0.01em; 
-    /* 아주 진한 네이비색 그라데이션 배경 유지 */
+    letter-spacing: 0.01em;
     background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e3a8a 100%);
     background-attachment: fixed;
     min-height:100vh;
@@ -48,8 +47,6 @@
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
   }
-
-  .phrase { display: inline-block; }
 
   #ribbonTrack{
     position:fixed; top:0; left:0; right:0; height:4px; z-index:100;
@@ -78,7 +75,6 @@
     to{opacity:1; transform:translateY(0);}
   }
 
-  /* 누락 문항 시각적 강조 애니메이션 */
   @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-4px); }
@@ -86,31 +82,30 @@
   }
   .error-shake {
     animation: shake 0.4s ease-in-out;
-    color: #e11d48 !important; 
+    color: #e11d48 !important;
     transition: color 0.3s;
   }
 
-  /* Intro Panel */
   .intro-panel{
     position:relative;
     background: #ffffff;
-    border: 2px solid #bae6fd; 
+    border: 2px solid #bae6fd;
     border-radius: 20px;
     padding:50px 26px 40px;
     text-align:center;
     box-shadow: 0 0 28px rgba(255, 255, 255, 0.4), 0 16px 40px rgba(0, 0, 0, 0.2);
   }
-  
+
   .logo-wrap {
     margin: 0 auto 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 64px; 
+    min-height: 64px;
   }
   .logo-wrap img {
-    height: 64px; 
+    height: 64px;
     width: auto;
     object-fit: contain;
   }
@@ -134,12 +129,12 @@
     margin-top: 8px;
     letter-spacing: 0.04em;
   }
-  
+
   .rule{
     width:56px; height:2px; margin:24px auto;
     background:linear-gradient(90deg, transparent, var(--navy), transparent);
   }
-  
+
   .intro-sub-title {
     font-family: var(--sans);
     font-weight: 700;
@@ -151,19 +146,19 @@
 
   .intro-body{
     font-family: var(--sans);
-    font-size: 14px; 
-    font-weight: 500; 
-    color: #334155; 
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
     line-height: 1.65;
-    max-width: 100%; 
-    margin: 0 auto 28px; 
+    max-width: 100%;
+    margin: 0 auto 28px;
     text-align: center;
     letter-spacing: 0.02em;
-    word-break: keep-all; 
+    word-break: keep-all;
   }
   .intro-body p { margin: 0 0 12px 0; }
   .intro-body p:last-child { margin: 0; }
-  
+
   .intro-meta{
     display:flex; justify-content:center; align-items: stretch; gap: 8px;
     margin:0 auto 28px; max-width:500px;
@@ -175,18 +170,17 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
   }
-  
+
   .meta-num{
     font-family:var(--sans); font-size:20px; font-weight:800; color:var(--navy);
     display:block; margin-bottom:4px; letter-spacing:0.02em;
   }
   .meta-label{font-size:12px; color:var(--ink-soft); font-weight:600;}
 
-  /* 버튼 잘림 문제 수정 적용 영역 */
   .course-select-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px; 
+    gap: 10px;
     margin-top: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -194,14 +188,14 @@
 
   .course-select-btn {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px; 
-    aspect-ratio: 1 / 1; 
+    gap: 12px;
+    aspect-ratio: 1 / 1;
     font-family: var(--sans);
-    font-weight: 700; 
-    font-size: 18px; 
+    font-weight: 700;
+    font-size: 18px;
     padding: 10px 6px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 16px;
@@ -215,14 +209,14 @@
     letter-spacing: -0.01em;
     line-height: 1.3;
     word-break: keep-all;
-    min-width: 0; /* 컨테이너 너비를 초과하지 않도록 보장 */
+    min-width: 0;
     box-sizing: border-box;
   }
-  
+
   .course-select-btn svg {
     width: 44px;
     height: 44px;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .course-select-btn:hover {
@@ -230,7 +224,7 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(186, 230, 253, 0.4), inset 0 1px 0 rgba(255, 255, 255, 1);
   }
-  
+
   .course-select-btn:hover svg {
     transform: scale(1.15) rotate(-8deg);
   }
@@ -264,7 +258,7 @@
   .item-label{font-family:var(--sans); font-size:16px; font-weight:600; color:var(--ink); margin:0 0 16px; line-height:1.5; word-break:keep-all; letter-spacing: 0.01em;}
 
   .scale-dots{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
-  
+
   .scale-btn{
     width:clamp(36px, 10vw, 48px); height:clamp(36px, 10vw, 48px);
     border-radius:50%; border:1.5px solid var(--line); background:#fff;
@@ -276,7 +270,7 @@
     background:var(--point); border-color:var(--point-deep); color:#fff;
     box-shadow:0 6px 16px rgba(30,58,138,0.3); transform:scale(1.08);
   }
-  
+
   .scale-caption{
     display:grid; grid-template-columns: 1fr auto 1fr; align-items: start; margin-top:12px; gap:4px;
     font-family:var(--sans); font-size:12px; color:var(--ink-soft); font-weight:600;
@@ -288,17 +282,17 @@
   .radio-group{display:flex; flex-direction:column; gap:10px;}
   .radio-group.row-layout {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   .radio-group label{
     display:flex; align-items:center; gap:12px; padding:12px 16px;
     border:1.5px solid var(--line); background:#fff; border-radius:8px; cursor:pointer;
-    font-family:var(--sans); font-size:16px; 
+    font-family:var(--sans); font-size:16px;
     line-height:1.4; transition:border-color .2s, background .2s;
-    word-break: keep-all; 
-    margin: 0; 
-    height: 100%; 
+    word-break: keep-all;
+    margin: 0;
+    height: 100%;
     letter-spacing: 0.01em;
   }
   .radio-group label:hover{border-color:var(--point); background:var(--point-soft);}
@@ -312,7 +306,6 @@
   }
   .radio-group label:has(input:checked){border-color:var(--point); background:var(--point-soft); font-weight:600;}
 
-  /* 텍스트 입력창 디자인 개선 */
   .text-input{
     width:100%; padding:15px 16px; border:1.5px solid var(--line); border-radius:10px;
     background:#fff; font-family:var(--sans); font-size:15px; color:var(--ink);
@@ -330,8 +323,8 @@
   }
   .thankyou h2{font-family:var(--sans); font-size:26px; font-weight:700; margin:0 0 16px; color:var(--navy-deep); letter-spacing:-0.01em;}
   .thankyou p{
-    font-family:var(--sans); font-size:15px; color:var(--ink-soft); 
-    line-height:1.65; max-width:380px; margin:0 auto; 
+    font-family:var(--sans); font-size:15px; color:var(--ink-soft);
+    line-height:1.65; max-width:380px; margin:0 auto;
     word-break:keep-all; letter-spacing: 0.01em;
   }
 
@@ -342,13 +335,13 @@
     display:flex; align-items:center; justify-content:space-between; padding:0 22px; z-index:90;
   }
   .bottom-nav.hidden{display:none;}
-  
+
   #prevBtn{
     background:none; color:var(--ink-soft); font-size:16px; padding:12px 6px; border:none; cursor:pointer; font-weight:600; font-family:var(--sans);
   }
   #prevBtn:disabled{opacity:0; pointer-events:none;}
   #prevBtn::before{content:'← ';}
-  
+
   #nextBtn{
     font-family:var(--sans); font-weight:700; background:var(--navy); color:#fff;
     padding:15px 34px; border-radius:8px; font-size:16px; border:none; cursor:pointer;
@@ -357,44 +350,60 @@
   }
   #nextBtn:hover{transform:translateY(-2px); background:#172554;}
   #nextBtn:active{transform:translateY(0);}
-  
-  .step-indicator{ font-family:var(--sans); font-weight:600; font-size:14px; color:var(--navy); letter-spacing: 0.02em; }
-  
-  #loading{
-    position:fixed; left:0; right:0; bottom:calc(var(--nav-h) + 10px); text-align:center;
-    font-family:var(--sans); font-size:15px; color:#fff; font-weight:700; display:none; z-index: 1000;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  }
 
-  #validationAlertOverlay {
-    position: fixed; 
-    top: 0; left: 0; right: 0; bottom: 0; 
-    background: rgba(0,0,0,0.5); 
+  .step-indicator{ font-family:var(--sans); font-weight:600; font-size:14px; color:var(--navy); letter-spacing: 0.02em; }
+
+  #submittingOverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  }
+  #submittingOverlay.active { opacity: 1; pointer-events: auto; }
+  #submittingOverlay .custom-alert-box { transform: translateY(0); }
+
+  .submitting-spinner {
+    width: 44px; height: 44px; margin: 0 auto 20px;
+    border: 4px solid var(--point-soft); border-top-color: var(--navy);
+    border-radius: 50%; animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  #validationAlertOverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 9999;
     opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
   }
   #validationAlertOverlay.active { opacity: 1; pointer-events: auto; }
-  
+
   .custom-alert-box {
     background: #fff; padding: 36px 24px 30px; border-radius: 20px; width: 85%; max-width: 320px; text-align: center;
     box-shadow: 0 24px 48px rgba(0,0,0,0.2); transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   #validationAlertOverlay.active .custom-alert-box { transform: translateY(0); }
-  
-  .custom-alert-icon { 
-    margin: 0 auto 16px; width: 54px; height: 54px; background: #ffe4e6; 
-    border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+
+  .custom-alert-icon {
+    margin: 0 auto 16px; width: 54px; height: 54px; background: #ffe4e6;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
   }
   .custom-alert-icon svg { width: 30px; height: 30px; }
-  
-  .custom-alert-msg { 
-    font-family: var(--sans); font-size: 16px; color: var(--ink); line-height: 1.6; 
-    font-weight: 700; margin: 0 0 26px; word-break: keep-all; letter-spacing: 0.01em; 
+
+  .custom-alert-msg {
+    font-family: var(--sans); font-size: 16px; color: var(--ink); line-height: 1.6;
+    font-weight: 700; margin: 0 0 26px; word-break: keep-all; letter-spacing: 0.01em;
   }
   .custom-alert-btn {
     width: 100%; padding: 14px; border-radius: 12px; background: var(--navy); color: #fff;
@@ -406,19 +415,18 @@
     .stage{padding:16px 12px;}
     .movement{padding:32px 20px;}
     .intro-panel{padding:42px 18px 36px;}
-    .logo-wrap img { height: 52px; } 
+    .logo-wrap img { height: 52px; }
     .lockup-title-main { font-size: 26px; }
     .lockup-title-sub { font-size: 18px; }
     .intro-meta { gap: 6px; }
     .intro-meta .meta-item { padding: 12px 4px; }
     .meta-num { font-size: 18px; }
     .meta-label { font-size: 11px; }
-    
-    /* 모바일 환경 버튼 최적화 조치 */
+
     .course-select-group { gap: 6px; }
     .course-select-btn { font-size: clamp(12px, 3.5vw, 15px); padding: 10px 2px; border-radius: 12px; letter-spacing: -0.03em; }
     .course-select-btn svg { width: 34px; height: 34px; }
-    
+
     .radio-group label{padding:12px 14px; font-size: 14px;}
   }
 </style>
@@ -431,10 +439,9 @@
   <form id="surveyForm">
     <div id="slidesWrap">
 
-      <!-- Slide 0 : Intro -->
       <section class="slide" id="slide_intro">
         <div class="intro-panel">
-          
+
           <div class="logo-wrap">
             <img src="./LH CI.png" alt="LH 한국토지주택공사">
           </div>
@@ -443,10 +450,10 @@
             <div class="lockup-title-main">2026 LH SCP 과정 6차수</div>
             <div class="lockup-title-sub">(Self-Coaching Program)</div>
           </div>
-          
+
           <div class="intro-sub-title">교육 만족도 설문조사</div>
           <div class="rule"></div>
-          
+
           <div class="intro-body">
             <p>본 설문조사는 「2026년도 SCP과정 교육운영」을 위해 교육에 참여하신 직원분들의 의견을 반영하여 보다 실효성 있는 교육을 시행하고자 인재개발원에서 실시하는 조사입니다.</p>
             <p>따라서 교육을 받으시면서 느꼈던 점, 향후 개선해야 하는 점 등을 솔직하게 답변 해주시기 바랍니다.</p>
@@ -469,7 +476,7 @@
           </div>
 
           <div class="course-select-group">
-            
+
             <button type="button" class="course-select-btn" onclick="startSurvey('day1')">
               <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="32" cy="32" r="30" fill="#DBEAFE"/>
@@ -479,7 +486,7 @@
               </svg>
               1일차<br>설문조사
             </button>
-            
+
             <button type="button" class="course-select-btn" onclick="startSurvey('day23')">
               <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="32" cy="32" r="30" fill="#DCFCE7"/>
@@ -492,7 +499,7 @@
               </svg>
               2~3일차<br>설문조사
             </button>
-            
+
             <button type="button" class="course-select-btn" onclick="startSurvey('post')">
               <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="32" cy="32" r="30" fill="#FEF3C7"/>
@@ -506,13 +513,11 @@
               </svg>
               SCP 사후진단<br>진행하기
             </button>
-            
+
           </div>
         </div>
       </section>
 
-      <!-- 일반 설문 영역 (Slide 1 ~ 9) 은 기존과 동일 -->
-      <!-- Slide 1 -->
       <section class="slide" id="slide_1">
         <div class="movement">
           <div class="m-head"><span class="m-num">01</span><span class="m-tag">학습효과 인식</span><span class="m-rule"></span></div>
@@ -532,7 +537,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">2. 본 교육과정은 귀하의 교육니즈를 반영하고 있습니까?</p>
-              <div class="scale-dots" data-q="q2_needs">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -548,7 +553,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">3. 본 교육과정이 귀하의 역량향상(업무수행)에 어느정도 도움이 된다고 생각하십니까?</p>
-              <div class="scale-dots" data-q="q3_helpful">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -566,14 +571,13 @@
         </div>
       </section>
 
-      <!-- Slide 2 -->
       <section class="slide" id="slide_2">
         <div class="movement">
           <div class="m-head"><span class="m-num">02</span><span class="m-tag">교육 설계·운영 (1/2)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">4. 본 교육과정에 대한 난이도는 어떻다고 생각하십니까?</p>
-              <div class="scale-dots" data-q="q4_difficulty">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -589,7 +593,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">5. 본 교육과정의 강의편성과 교과별 시간배정이 적정하였습니까?</p>
-              <div class="scale-dots" data-q="q5_schedule">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -611,21 +615,22 @@
                 <label><input type="radio" name="q6_duration_ok" value="네"> 네</label>
                 <label><input type="radio" name="q6_duration_ok" value="아니요"> 아니요</label>
               </div>
-              <p class="item-label" style="margin-top:20px; font-size:14px; color:var(--ink-soft); font-weight:400;">6-1. 본 과정의 적정하다고 생각하시는 교육기간을 작성해주십시오.</p>
-              <input type="text" class="text-input" name="q6_1_duration_idea" placeholder="예: 3박 4일">
+              <div id="q6_1_wrap">
+                <p class="item-label" style="margin-top:20px; font-size:14px; color:var(--ink-soft); font-weight:400;">6-1. 6번 문항에서 아니오를 선택한 경우에만 답하여주십시오.<br>본 과정에서 적정하다고 생각하시는 교육기간을 작성해주십시오.(ex. 3박4일)</p>
+                <input type="text" class="text-input" name="q6_1_duration_idea" placeholder="예: 3박4일">
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Slide 3 -->
       <section class="slide" id="slide_3">
         <div class="movement">
           <div class="m-head"><span class="m-num">03</span><span class="m-tag">교육 설계·운영 (2/2)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">7. 강의시설(강의실, 숙박, 식사, 도구 등)에 대한 만족수준은 어느정도 입니까?</p>
-              <div class="scale-dots" data-q="q7_facility">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -643,7 +648,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">8. 일정·준비물 등 사전안내는 충실하고 효과적이였습니까?</p>
-              <div class="scale-dots" data-q="q8_notice">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -659,7 +664,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">9. 외부 체험활동 만족수준은 어떤가요?</p>
-              <div class="scale-dots" data-q="q9_activity">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -677,7 +682,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">10. 운영진의 교육지원역량과 태도에 대한 만족수준은 어느정도 입니까?</p>
-              <div class="scale-dots" data-q="q10_staff">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -695,14 +700,13 @@
         </div>
       </section>
 
-      <!-- Slide 4 -->
       <section class="slide" id="slide_4">
         <div class="movement">
           <div class="m-head"><span class="m-num">04</span><span class="m-tag">교육과정 전반</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">11. 본 교육과정이 계속 실시 될 필요가 있다고 생각하십니까?</p>
-              <div class="scale-dots" data-q="q11_continue">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -718,7 +722,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">12. 본 교육과정의 전반적인 만족도는 어느정도 입니까?</p>
-              <div class="scale-dots" data-q="q12_overall">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -734,7 +738,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">13. 본 교육과정이 다시 개설된다면 참여하거나 주위에 추천하겠습니까?</p>
-              <div class="scale-dots" data-q="q13_recommend">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -752,17 +756,16 @@
         </div>
       </section>
 
-      <!-- Slide 5 : 14번 문항 -->
       <section class="slide" id="slide_14">
         <div class="movement">
           <div class="m-head"><span class="m-num">05</span><span class="m-tag">강의별 만족도 (1/4)</span><span class="m-rule"></span></div>
           <p class="m-title" style="color:var(--navy); font-weight:900;">[ 팀워크 강화: LH 도시숲 커넥트 프로젝트 ]</p>
           <p class="m-desc">강사: 김지윤 강사 | 1일차</p>
-          
+
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">14-1. 해당 강의의 내용은 충실하였습니까?</p>
-              <div class="scale-dots" data-q="q14_1">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -778,7 +781,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">14-2. 해당 강의 내용은 이해하기에 적절하였습니까?</p>
-              <div class="scale-dots" data-q="q14_2">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -794,7 +797,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">14-3. 해당 강사의 강의전달력은 어떻습니까?</p>
-              <div class="scale-dots" data-q="q14_3">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -810,7 +813,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">14-4. 해당 강사의 준비와 강의태도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q14_4">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -826,7 +829,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">14-5. 해당 강의의 전반적인 만족도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q14_5">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -848,17 +851,16 @@
         </div>
       </section>
 
-      <!-- Slide 6 : 15번 문항 -->
       <section class="slide" id="slide_15">
         <div class="movement">
           <div class="m-head"><span class="m-num">06</span><span class="m-tag">강의별 만족도 (2/4)</span><span class="m-rule"></span></div>
           <p class="m-title" style="color:var(--navy); font-weight:900;">[ 자가진단: 자기이해를 위한 시간 ]</p>
           <p class="m-desc">강사: 오미현 강사 | 1일차</p>
-          
+
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">15-1. 해당 강의의 내용은 충실하였습니까?</p>
-              <div class="scale-dots" data-q="q15_1">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -874,7 +876,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">15-2. 해당 강의 내용은 이해하기에 적절하였습니까?</p>
-              <div class="scale-dots" data-q="q15_2">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -890,7 +892,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">15-3. 해당 강사의 강의전달력은 어떻습니까?</p>
-              <div class="scale-dots" data-q="q15_3">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -906,7 +908,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">15-4. 해당 강사의 준비와 강의태도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q15_4">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -922,7 +924,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">15-5. 해당 강의의 전반적인 만족도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q15_5">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -944,17 +946,16 @@
         </div>
       </section>
 
-      <!-- Slide 7 : 16번 문항 -->
       <section class="slide" id="slide_16">
         <div class="movement">
           <div class="m-head"><span class="m-num">07</span><span class="m-tag">강의별 만족도 (3/4)</span><span class="m-rule"></span></div>
-          <p class="m-title" style="color:var(--navy); font-weight:900;">[ 재무교육: 행복한 미래를 위한 은퇴준비 및 노후설계 ]</p>
+          <p class="m-title" style="color:var(--navy); font-weight:900;">[ 재무교육: 행복한 미래를 위한 재무설계 ]</p>
           <p class="m-desc">강사: 이충구 강사 | 2일차</p>
-          
+
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">16-1. 해당 강의의 내용은 충실하였습니까?</p>
-              <div class="scale-dots" data-q="q16_1">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -970,7 +971,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">16-2. 해당 강의 내용은 이해하기에 적절하였습니까?</p>
-              <div class="scale-dots" data-q="q16_2">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -986,7 +987,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">16-3. 해당 강사의 강의전달력은 어떻습니까?</p>
-              <div class="scale-dots" data-q="q16_3">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1002,7 +1003,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">16-4. 해당 강사의 준비와 강의태도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q16_4">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1018,7 +1019,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">16-5. 해당 강의의 전반적인 만족도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q16_5">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1040,17 +1041,16 @@
         </div>
       </section>
 
-      <!-- Slide 8 : 17번 문항 -->
       <section class="slide" id="slide_17">
         <div class="movement">
           <div class="m-head"><span class="m-num">08</span><span class="m-tag">강의별 만족도 (4/4)</span><span class="m-rule"></span></div>
           <p class="m-title" style="color:var(--navy); font-weight:900;">[ 명사 특강 ]</p>
           <p class="m-desc">강사: 박성준 역술가 | 3일차</p>
-          
+
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">17-1. 해당 강의의 내용은 충실하였습니까?</p>
-              <div class="scale-dots" data-q="q17_1">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1066,7 +1066,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">17-2. 해당 강의 내용은 이해하기에 적절하였습니까?</p>
-              <div class="scale-dots" data-q="q17_2">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1082,7 +1082,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">17-3. 해당 강사의 강의전달력은 어떻습니까?</p>
-              <div class="scale-dots" data-q="q17_3">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1098,7 +1098,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">17-4. 해당 강사의 준비와 강의태도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q17_4">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1114,7 +1114,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">17-5. 해당 강의의 전반적인 만족도는 어떻습니까?</p>
-              <div class="scale-dots" data-q="q17_5">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1136,11 +1136,10 @@
         </div>
       </section>
 
-      <!-- Slide 9 : 총평 및 기초통계 -->
       <section class="slide" id="slide_9">
         <div class="movement">
           <div class="m-head"><span class="m-num">09</span><span class="m-tag">총평 및 기초통계</span><span class="m-rule"></span></div>
-          
+
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">18. 본 교육과정 전반에 관한 의견(개선점, 느낀점 등)이 있으시면 작성해주십시오.</p>
@@ -1181,10 +1180,8 @@
         </div>
       </section>
 
-      <!-- ★수정됨: 사후진단 1/4 (인적사항 전용 화면 - 가운데 정렬 + 타이틀 강조) -->
       <section class="slide" id="slide_post_1">
         <div class="movement">
-          <!-- 메인 타이틀 중앙 정렬 처리 -->
           <div style="text-align: center; margin-bottom: 28px;">
             <div style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 12px;">01</div>
             <h2 style="font-family: var(--sans); font-size: clamp(22px, 6vw, 26px); font-weight: 800; color: var(--navy-deep); margin: 0; letter-spacing: -0.02em; line-height: 1.4; word-break: keep-all;">
@@ -1192,15 +1189,14 @@
             </h2>
             <p style="font-size: 14px; color: var(--navy); font-weight: 600; margin: 6px 0 0;">(1/4)</p>
           </div>
-          
-          <!-- 안내 문구 박스 모바일 최적화 (가운데 정렬, 줄바꿈, 폰트 웨이트 조절) -->
+
           <div style="padding: 28px 16px; background: #f8fafc; border-radius: 16px; margin-bottom: 32px; font-size: 15px; line-height: 1.7; color: #475569; word-break: keep-all; text-align: center; border: 1px solid #e2e8f0; letter-spacing: -0.01em;">
             안녕하세요.<br>
             본 설문은 교육 프로그램 참여 이전 업무역량,<br>
             자기 이해 및 재무관리 역량에 대한 이해도,<br>
             업무 몰입 및 정서적 변화 등에 대한 경험을<br>
             확인하기 위한 사후 조사입니다.<br><br>
-            
+
             <span style="display: block; font-size: 16px; font-weight: 800; color: var(--navy-deep); line-height: 1.6; margin: 20px 0;">
               응답해주신 내용은 교육 효과 분석 및<br>
               향후 프로그램 개선을 위한<br>
@@ -1208,7 +1204,7 @@
               정답이 있는 문항이 아니므로<br>
               편하게 응답해주시면 됩니다.
             </span>
-            
+
             바쁘시겠지만 보다 나은 교육을 위해<br>
             성실한 응답 부탁드립니다. 감사합니다.
           </div>
@@ -1226,14 +1222,13 @@
         </div>
       </section>
 
-      <!-- 사후진단 2/4 (문항 1~3) -->
       <section class="slide" id="slide_post_2">
         <div class="movement">
           <div class="m-head"><span class="m-num">02</span><span class="m-tag">자기관리 역량강화 사후진단 (2/4)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">1. 진단도구를 통해(TA 진단 및 분석)을 통해 나의 심리적 성향과 대화 패턴을 객관적으로 명확히 이해하게 되었다.</p>
-              <div class="scale-dots" data-q="post_q1">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1249,7 +1244,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">2. 본 과정을 통해 나와 다른 성향을 가진 동료들의 심리적 특성을 이해하고 상황에 맞는 소통 기준을 체득하게 되었다.</p>
-              <div class="scale-dots" data-q="post_q2">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1265,7 +1260,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">3. 교육 이후, 나는 대화 중 마찰이나 오해가 발생했을 때 원인을 파악하여 대화를 긍정적인 방향으로 이끌 수 있는 노하우가 생겼다.</p>
-              <div class="scale-dots" data-q="post_q3">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1283,14 +1278,13 @@
         </div>
       </section>
 
-      <!-- 사후진단 3/4 (문항 4~6) -->
       <section class="slide" id="slide_post_3">
         <div class="movement">
           <div class="m-head"><span class="m-num">03</span><span class="m-tag">자기관리 역량강화 사후진단 (3/4)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">4. 본 과정을 통해 재직 기간 및 은퇴 이후의 삶에 대비하여 생애 목표와 재무 로드맵을 구체화하는데 도움이 되었다.</p>
-              <div class="scale-dots" data-q="post_q4">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1306,7 +1300,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">5. 본 과정을 통해 나의 현재 자산 및 현금 흐름 상태를 정기적으로 점검하고 개선 방향을 설정하는 데 큰 도움이 되었다.</p>
-              <div class="scale-dots" data-q="post_q5">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1322,7 +1316,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">6. 교육 이후, 금융 시장 변화와 생애주기를 고려하여 수익성과 안정성을 균형 있게 배분한 맞춤형 자산 포트폴리오 구성 전략을 도출하는데 도움이 되었다.</p>
-              <div class="scale-dots" data-q="post_q6">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1340,14 +1334,13 @@
         </div>
       </section>
 
-      <!-- 사후진단 4/4 (문항 7~9) -->
       <section class="slide" id="slide_post_4">
         <div class="movement">
           <div class="m-head"><span class="m-num">04</span><span class="m-tag">자기관리 역량강화 사후진단 (4/4)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">7. 교육 내용을 바탕으로 향후 나의 자산관리 계획을 현업과 일상에서 즉시 실천할 수 있는 구체적인 실행 방안을 수립하는데 도움이 되었다.</p>
-              <div class="scale-dots" data-q="post_q7">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1363,7 +1356,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">8. 지역 명소 탐방 및 휴식을 통해 직무 스트레스를 해소하고, 현업 복귀를 위한 정서적 활력을 얻는데 도움이 되었다.</p>
-              <div class="scale-dots" data-q="post_q8">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1379,7 +1372,7 @@
             </div>
             <div class="scale-item">
               <p class="item-label">9. 명사 특강에서 얻은 새로운 인사이트가 현업에 임하는 나의 관점을 확장하고 새로운 영감을 주었다.</p>
-              <div class="scale-dots" data-q="post_q9">
+              <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
                 <button type="button" class="scale-btn" value="3">3</button>
@@ -1397,14 +1390,13 @@
         </div>
       </section>
 
-      <!-- Slide 11 : 완료 화면 -->
       <section class="slide thankyou" id="slide_thankyou">
         <div class="flourish">✓</div>
         <h2>설문이 완료되었습니다</h2>
         <p>
-          <span class="phrase">귀하의 소중한 의견 진심으로 감사드립니다.</span><br>
-          <span class="phrase">응답해 주신 내용은 향후 더 나은 교육 운영을 위한</span> 
-          <span class="phrase">귀중한 자료로 활용하겠습니다.</span>
+          귀하의 소중한 의견 진심으로 감사드립니다.<br>
+          응답해 주신 내용은 향후 더 나은 교육 운영을 위한
+          귀중한 자료로 활용하겠습니다.
         </p>
       </section>
 
@@ -1412,7 +1404,6 @@
   </form>
 </div>
 
-<!-- 커스텀 유효성 검사 팝업 -->
 <div id="validationAlertOverlay">
   <div class="custom-alert-box">
     <div class="custom-alert-icon">
@@ -1425,7 +1416,12 @@
   </div>
 </div>
 
-<div id="loading">제출 중입니다. 잠시만 기다려주세요...</div>
+<div id="submittingOverlay">
+  <div class="custom-alert-box">
+    <div class="submitting-spinner"></div>
+    <p class="custom-alert-msg" style="margin-bottom:0;">제출중입니다.<br>잠시만 기다려주십시오.</p>
+  </div>
+</div>
 
 <div class="bottom-nav hidden" id="bottomNav">
   <button type="button" id="prevBtn">이전</button>
@@ -1436,7 +1432,7 @@
 <script>
   const form = document.getElementById('surveyForm');
   const allSlides = Array.from(document.querySelectorAll('.slide'));
-  let activeSlides = [allSlides[0]]; 
+  let activeSlides = [allSlides[0]];
   let currentIndex = 0;
   let currentSurveyType = null;
 
@@ -1445,14 +1441,14 @@
   const stepIndicator = document.getElementById('stepIndicator');
   const bottomNav = document.getElementById('bottomNav');
   const ribbonFill = document.getElementById('ribbonFill');
-  const loading = document.getElementById('loading');
+  const submittingOverlay = document.getElementById('submittingOverlay');
   const validationOverlay = document.getElementById('validationAlertOverlay');
 
   function closeValidationAlert() {
     validationOverlay.classList.remove('active');
   }
 
-  document.querySelectorAll('.scale-dots[data-q]').forEach(group => {
+  document.querySelectorAll('.scale-dots').forEach(group => {
     const buttons = group.querySelectorAll('.scale-btn');
     const hiddenInput = group.closest('.scale-item').querySelector('input[type="hidden"]');
     buttons.forEach(btn => {
@@ -1468,7 +1464,7 @@
     if (type === 'day1') {
       activeSlides = allSlides.filter(s => {
         const id = s.id;
-        return id === 'slide_intro' || id === 'slide_14' || id === 'slide_15' || id === 'slide_9' || id === 'slide_thankyou';
+        return id === 'slide_intro' || id === 'slide_14' || id === 'slide_15' || id === 'slide_thankyou';
       });
     } else if (type === 'day23') {
       activeSlides = allSlides.filter(s => {
@@ -1488,15 +1484,15 @@
   function startSurvey(type) {
     currentSurveyType = type;
     buildActiveSlides(type);
-    currentIndex = 1; 
-    
+    currentIndex = 1;
+
     history.pushState({ index: currentIndex, type: currentSurveyType }, "", "");
     renderSlide();
   }
 
   function renderSlide() {
     allSlides.forEach(s => s.classList.remove('active'));
-    
+
     const currentSlide = activeSlides[currentIndex];
     if(currentSlide) {
       currentSlide.classList.add('active');
@@ -1516,10 +1512,10 @@
       return;
     }
 
-    prevBtn.disabled = false; 
-    
+    prevBtn.disabled = false;
+
     stepIndicator.textContent = currentIndex + ' / ' + (activeSlides.length - 2);
-    
+
     if (currentIndex === activeSlides.length - 2) {
       nextBtn.textContent = '제출하기';
     } else {
@@ -1528,23 +1524,23 @@
 
     const pct = Math.round(((currentIndex - 1) / (activeSlides.length - 3)) * 100);
     ribbonFill.style.width = pct + '%';
-    
+
     window.scrollTo({top:0, behavior:'auto'});
   }
 
   function validateCurrentSlide() {
     const currentSlide = activeSlides[currentIndex];
     const questionItems = currentSlide.querySelectorAll('.scale-item');
-    
+
     for (let item of questionItems) {
       let isAnswered = true;
-      
+
       const scaleGroup = item.querySelector('.scale-dots');
       if (scaleGroup) {
         const hiddenInput = item.querySelector('input[type="hidden"]');
         if (!hiddenInput || !hiddenInput.value) isAnswered = false;
       }
-      
+
       const radioGroup = item.querySelector('.radio-group');
       if (radioGroup) {
         const radios = radioGroup.querySelectorAll('input[type="radio"]');
@@ -1561,26 +1557,33 @@
       if (requiredTextInput) {
         if (!requiredTextInput.value.trim()) isAnswered = false;
       }
-      
+
+      // 6번 문항에서 '아니요'를 선택한 경우, 6-1 서술형 응답을 필수로 검사
+      const durationNoChecked = item.querySelector('input[name="q6_duration_ok"][value="아니요"]:checked');
+      if (durationNoChecked) {
+        const followUp = item.querySelector('input[name="q6_1_duration_idea"]');
+        if (!followUp || !followUp.value.trim()) isAnswered = false;
+      }
+
       if (!isAnswered) {
         validationOverlay.classList.add('active');
         item.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
+
         const label = item.querySelector('.item-label');
         if(label) {
           label.classList.add('error-shake');
           setTimeout(() => label.classList.remove('error-shake'), 1000);
         }
-        return false; 
+        return false;
       }
     }
-    return true; 
+    return true;
   }
 
   nextBtn.addEventListener('click', () => {
     if (currentIndex > 0 && currentIndex < activeSlides.length - 1) {
       if (!validateCurrentSlide()) {
-        return; 
+        return;
       }
     }
 
@@ -1619,26 +1622,26 @@
   function submitSurvey(){
     nextBtn.disabled = true;
     bottomNav.classList.add('hidden');
-    loading.style.display = 'block';
+    submittingOverlay.classList.add('active');
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxWBpbU0NcraO1D-B02AiXNmWkuCQACifpISMisUTd3xUc1Whop_xHFfg4f0zOaDdfPjw/exec'; 
-    
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxWBpbU0NcraO1D-B02AiXNmWkuCQACifpISMisUTd3xUc1Whop_xHFfg4f0zOaDdfPjw/exec';
+
     const formData = new FormData(form);
-    
+
     let surveyTypeValue = '사후 진단 설문';
     if (currentSurveyType === 'day1') surveyTypeValue = '1일차 설문';
     else if (currentSurveyType === 'day23') surveyTypeValue = '2~3일차 설문';
     formData.append('survey_type', surveyTypeValue);
-    
+
     fetch(scriptURL, { method:'POST', body: formData })
       .then(() => {
-        loading.style.display = 'none';
+        submittingOverlay.classList.remove('active');
         currentIndex++;
         renderSlide();
       })
       .catch(error => {
         console.error('Error!', error.message);
-        loading.style.display = 'none';
+        submittingOverlay.classList.remove('active');
         bottomNav.classList.remove('hidden');
         nextBtn.disabled = false;
         alert('제출 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');

@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Noto+Serif+KR:wght@600;700;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css">
 <style>
   :root{
     /* 메인 포인트 색상 */
@@ -27,6 +28,7 @@
     --serif-kr: 'Noto Serif KR', serif;
     --serif-en: 'Playfair Display', 'Cormorant Garamond', serif;
     --sans: 'PretendardVariable', 'Pretendard', -apple-system, sans-serif;
+    --paperlogy: 'Paperlogy', 'PretendardVariable', 'Pretendard', -apple-system, sans-serif;
     --nav-h: 84px;
   }
 
@@ -252,6 +254,29 @@
   }
   .m-desc{ font-family:var(--sans); font-size:14px; color:var(--ink-soft); margin:0 0 26px; word-break:keep-all; letter-spacing: 0.02em;}
 
+  .course-banner{
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 0 0 26px;
+  }
+  .course-banner .m-title{
+    font-family: var(--paperlogy);
+    color:#fff; font-weight:800;
+    font-size: clamp(19px, 5.4vw, 23px);
+    line-height:1.45;
+    margin: 0 0 8px;
+    word-break: keep-all;
+  }
+  .course-banner .m-desc{
+    font-family: var(--paperlogy);
+    color: rgba(255,255,255,0.92);
+    font-weight:600;
+    font-size: clamp(14px, 3.9vw, 16px);
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+
   .scale-block{display:flex; flex-direction:column; gap:34px;}
   .scale-item{padding-bottom:30px; border-bottom:1px dashed var(--line);}
   .scale-item:last-child{border-bottom:none; padding-bottom:0;}
@@ -462,7 +487,7 @@
 
           <div class="intro-meta">
             <div class="meta-item">
-              <span class="meta-num">22</span>
+              <span class="meta-num">23</span>
               <span class="meta-label">문항</span>
             </div>
             <div class="meta-item">
@@ -759,8 +784,10 @@
       <section class="slide" id="slide_14">
         <div class="movement">
           <div class="m-head"><span class="m-num">05</span><span class="m-tag">강의별 만족도 (1/4)</span><span class="m-rule"></span></div>
-          <p class="m-title" style="color:var(--navy); font-weight:900;">[ 팀워크 강화: LH 도시숲 커넥트 프로젝트 ]</p>
-          <p class="m-desc">강사: 김지윤 강사 | 1일차</p>
+          <div class="course-banner">
+            <p class="m-title">[ 팀워크 강화: LH 도시숲 커넥트 프로젝트 ]</p>
+            <p class="m-desc">강사: 김지윤 강사 | 1일차</p>
+          </div>
 
           <div class="scale-block">
             <div class="scale-item">
@@ -854,8 +881,10 @@
       <section class="slide" id="slide_15">
         <div class="movement">
           <div class="m-head"><span class="m-num">06</span><span class="m-tag">강의별 만족도 (2/4)</span><span class="m-rule"></span></div>
-          <p class="m-title" style="color:var(--navy); font-weight:900;">[ 자가진단: 자기이해를 위한 시간 ]</p>
-          <p class="m-desc">강사: 오미현 강사 | 1일차</p>
+          <div class="course-banner">
+            <p class="m-title">[ 자가진단: 자기이해를 위한 시간 ]</p>
+            <p class="m-desc">강사: 오미현 강사 | 1일차</p>
+          </div>
 
           <div class="scale-block">
             <div class="scale-item">
@@ -949,8 +978,10 @@
       <section class="slide" id="slide_16">
         <div class="movement">
           <div class="m-head"><span class="m-num">07</span><span class="m-tag">강의별 만족도 (3/4)</span><span class="m-rule"></span></div>
-          <p class="m-title" style="color:var(--navy); font-weight:900;">[ 재무교육: 행복한 미래를 위한 재무설계 ]</p>
-          <p class="m-desc">강사: 이충구 강사 | 2일차</p>
+          <div class="course-banner">
+            <p class="m-title">[ 재무교육: 행복한 미래를 위한 은퇴준비 및 노후설계 ]</p>
+            <p class="m-desc">강사: 이충구 강사 | 2일차</p>
+          </div>
 
           <div class="scale-block">
             <div class="scale-item">
@@ -1044,8 +1075,10 @@
       <section class="slide" id="slide_17">
         <div class="movement">
           <div class="m-head"><span class="m-num">08</span><span class="m-tag">강의별 만족도 (4/4)</span><span class="m-rule"></span></div>
-          <p class="m-title" style="color:var(--navy); font-weight:900;">[ 명사 특강 ]</p>
-          <p class="m-desc">강사: 박성준 역술가 | 3일차</p>
+          <div class="course-banner">
+            <p class="m-title">[ 명사 특강 ]</p>
+            <p class="m-desc">강사: 박성준 역술가 | 3일차</p>
+          </div>
 
           <div class="scale-block">
             <div class="scale-item">
@@ -1146,34 +1179,38 @@
               <textarea name="q18_overall_comment" class="text-input" placeholder="의견을 자유롭게 작성해주십시오."></textarea>
             </div>
             <div class="scale-item">
-              <p class="item-label">19. 귀하의 성별을 선택해주세요.</p>
+              <p class="item-label">19. 향후('27년~) SCP 과정 시행 시, 희망하시는 교육 진행 지역 혹은 희망 활동이 있으시면 편히 의견 부탁드립니다.</p>
+              <input type="text" class="text-input" name="q19_future_suggestion" placeholder="의견을 자유롭게 작성해주십시오.">
+            </div>
+            <div class="scale-item">
+              <p class="item-label">20. 귀하의 성별을 선택해주세요.</p>
               <div class="radio-group row-layout">
-                <label><input type="radio" name="q19_gender" value="남자"> 남자</label>
-                <label><input type="radio" name="q19_gender" value="여자"> 여자</label>
+                <label><input type="radio" name="q20_gender" value="남자"> 남자</label>
+                <label><input type="radio" name="q20_gender" value="여자"> 여자</label>
               </div>
             </div>
             <div class="scale-item">
-              <p class="item-label">20. 귀하의 나이(만 나이)를 선택해주세요.</p>
+              <p class="item-label">21. 귀하의 나이(만 나이)를 선택해주세요.</p>
               <div class="radio-group row-layout">
-                <label><input type="radio" name="q20_age" value="25세 이하"> ~25세 이하</label>
-                <label><input type="radio" name="q20_age" value="26~30세"> 26~30세</label>
-                <label><input type="radio" name="q20_age" value="31~35세"> 31~35세</label>
-                <label><input type="radio" name="q20_age" value="36~40세"> 36~40세</label>
-                <label><input type="radio" name="q20_age" value="41~45세"> 41~45세</label>
-                <label><input type="radio" name="q20_age" value="46~50세"> 46~50세</label>
-                <label><input type="radio" name="q20_age" value="51~55세"> 51~55세</label>
-                <label><input type="radio" name="q20_age" value="56세 이상"> 56세 이상</label>
+                <label><input type="radio" name="q21_age" value="25세 이하"> ~25세 이하</label>
+                <label><input type="radio" name="q21_age" value="26~30세"> 26~30세</label>
+                <label><input type="radio" name="q21_age" value="31~35세"> 31~35세</label>
+                <label><input type="radio" name="q21_age" value="36~40세"> 36~40세</label>
+                <label><input type="radio" name="q21_age" value="41~45세"> 41~45세</label>
+                <label><input type="radio" name="q21_age" value="46~50세"> 46~50세</label>
+                <label><input type="radio" name="q21_age" value="51~55세"> 51~55세</label>
+                <label><input type="radio" name="q21_age" value="56세 이상"> 56세 이상</label>
               </div>
             </div>
             <div class="scale-item">
-              <p class="item-label">21. 귀하의 입사 후 근속(누적)년수는 몇 년입니까?</p>
+              <p class="item-label">22. 귀하의 입사 후 근속(누적)년수는 몇 년입니까?</p>
               <div class="radio-group row-layout">
-                <label><input type="radio" name="q21_tenure" value="1년 미만"> 1년 미만</label>
-                <label><input type="radio" name="q21_tenure" value="1~4년"> 1~4년</label>
-                <label><input type="radio" name="q21_tenure" value="5~9년"> 5~9년</label>
-                <label><input type="radio" name="q21_tenure" value="10~14년"> 10~14년</label>
-                <label><input type="radio" name="q21_tenure" value="15~19년"> 15~19년</label>
-                <label><input type="radio" name="q21_tenure" value="21년 이상"> 21년 이상</label>
+                <label><input type="radio" name="q22_tenure" value="1년 미만"> 1년 미만</label>
+                <label><input type="radio" name="q22_tenure" value="1~4년"> 1~4년</label>
+                <label><input type="radio" name="q22_tenure" value="5~9년"> 5~9년</label>
+                <label><input type="radio" name="q22_tenure" value="10~14년"> 10~14년</label>
+                <label><input type="radio" name="q22_tenure" value="15~19년"> 15~19년</label>
+                <label><input type="radio" name="q22_tenure" value="21년 이상"> 21년 이상</label>
               </div>
             </div>
           </div>
@@ -1624,7 +1661,7 @@
     bottomNav.classList.add('hidden');
     submittingOverlay.classList.add('active');
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxWBpbU0NcraO1D-B02AiXNmWkuCQACifpISMisUTd3xUc1Whop_xHFfg4f0zOaDdfPjw/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz1HYyU95hHIt28FMYceCcfv7L-99IjtVkmnMZ-Rk6lhR8IYPG8itlfJg816AcWG_5_/exec';
 
     const formData = new FormData(form);
 

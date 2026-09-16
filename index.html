@@ -281,6 +281,7 @@
   .scale-item{padding-bottom:30px; border-bottom:1px dashed var(--line);}
   .scale-item:last-child{border-bottom:none; padding-bottom:0;}
   .item-label{font-family:var(--sans); font-size:16px; font-weight:600; color:var(--ink); margin:0 0 16px; line-height:1.5; word-break:keep-all; letter-spacing: 0.01em;}
+  .item-note{font-family:var(--sans); font-size:13px; color:var(--ink-soft); margin:-10px 0 16px; line-height:1.5; word-break:keep-all;}
 
   .scale-dots{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
 
@@ -330,6 +331,27 @@
     content:''; position:absolute; inset:3px; border-radius:50%; background:var(--point);
   }
   .radio-group label:has(input:checked){border-color:var(--point); background:var(--point-soft); font-weight:600;}
+
+  .radio-group.likert-5{
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:6px;
+  }
+  .radio-group.likert-5 label{
+    flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; gap:0; padding:12px 2px;
+    font-size:clamp(11px, 3vw, 13px); font-weight:600; line-height:1.35;
+    word-break:keep-all;
+  }
+  .radio-group.likert-5 input[type="radio"]{ display:none; }
+
+  .radio-group.row-layout.cols-4{
+    grid-template-columns:repeat(4, 1fr);
+  }
+  .radio-group.row-layout.cols-4 label{
+    flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; gap:6px; padding:10px 4px;
+    font-size:clamp(11px, 2.9vw, 13px); line-height:1.3;
+  }
+  .radio-group.row-layout.cols-4 input[type="radio"]{ display:none; }
 
   .text-input{
     width:100%; padding:15px 16px; border:1.5px solid var(--line); border-radius:10px;
@@ -549,12 +571,13 @@
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">1. 본 교육과정에 대한 귀하의 가장 큰 학습 참여동기는 무엇입니까?</p>
-              <div class="radio-group row-layout">
+              <p class="item-note">* 버튼을 눌러주세요. 기타의 경우 텍스트로 작성을 부탁드립니다.</p>
+              <div class="radio-group row-layout cols-4">
                 <label><input type="radio" name="q1_motivation" value="역량향상"> 역량향상</label>
                 <label><input type="radio" name="q1_motivation" value="상사 및 동료의 추천"> 상사 및 동료의 추천</label>
-                <label><input type="radio" name="q1_motivation" value="강제참석(필수이수 등)"> 강제참석(필수이수 등)</label>
+                <label><input type="radio" name="q1_motivation" value="강제참석(필수이수 등)"> 강제참석<br>(필수이수 등)</label>
                 <label><input type="radio" name="q1_motivation" value="자기계발"> 자기계발</label>
-                <label style="grid-column: 1 / -1; flex-wrap: wrap;">
+                <label style="grid-column: 1 / -1; flex-direction:row; flex-wrap: wrap;">
                   <input type="radio" name="q1_motivation" value="기타"> 기타
                   <input type="text" name="q1_motivation_etc" class="text-input" style="width: auto; flex: 1; min-width: 120px; padding: 8px 10px; margin-top:0;" placeholder="직접입력">
                 </label>
@@ -602,19 +625,13 @@
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">4. 본 교육과정에 대한 난이도는 어떻다고 생각하십니까?</p>
-              <div class="scale-dots">
-                <button type="button" class="scale-btn" value="1">1</button>
-                <button type="button" class="scale-btn" value="2">2</button>
-                <button type="button" class="scale-btn" value="3">3</button>
-                <button type="button" class="scale-btn" value="4">4</button>
-                <button type="button" class="scale-btn" value="5">5</button>
+              <div class="radio-group likert-5">
+                <label><input type="radio" name="q4_difficulty" value="매우높다">매우높다</label>
+                <label><input type="radio" name="q4_difficulty" value="높다">높다</label>
+                <label><input type="radio" name="q4_difficulty" value="보통이다">보통이다</label>
+                <label><input type="radio" name="q4_difficulty" value="낮다">낮다</label>
+                <label><input type="radio" name="q4_difficulty" value="매우낮다">매우낮다</label>
               </div>
-              <div class="scale-caption">
-                <span class="cap-left">매우 낮다</span>
-                <span class="cap-center">보통이다</span>
-                <span class="cap-right">매우 높다</span>
-              </div>
-              <input type="hidden" name="q4_difficulty">
             </div>
             <div class="scale-item">
               <p class="item-label">5. 본 교육과정의 강의편성과 교과별 시간배정이 적정하였습니까?</p>

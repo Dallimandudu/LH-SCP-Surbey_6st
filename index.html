@@ -181,7 +181,7 @@
 
   .course-select-group {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin-top: 20px;
     width: 100%;
@@ -545,20 +545,6 @@
                 <line x1="40" y1="16" x2="40" y2="24" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
               </svg>
               2~3일차<br>설문조사
-            </button>
-
-            <button type="button" class="course-select-btn" onclick="startSurvey('post')">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="32" r="30" fill="#FEF3C7"/>
-                <path d="M22 20h16v24H22z" fill="#FFFFFF" stroke="#F59E0B" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M26 26h8M26 32h8" stroke="#FCD34D" stroke-width="2" stroke-linecap="round"/>
-                <g transform="translate(4, -4)">
-                  <path d="M40 28l-3-3-12 12v3h3l12-12z" fill="#3B82F6" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
-                  <path d="M25 40l-2 2v-2h2z" fill="#1E3A8A"/>
-                  <path d="M40 28l-3-3 2-2 3 3-2 2z" fill="#F87171" stroke="#DC2626" stroke-width="2" stroke-linejoin="round"/>
-                </g>
-              </svg>
-              SCP 사후진단<br>진행하기
             </button>
 
           </div>
@@ -1234,51 +1220,9 @@
         </div>
       </section>
 
-      <section class="slide" id="slide_post_1">
-        <div class="movement">
-          <div style="text-align: center; margin-bottom: 28px;">
-            <div style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 12px;">01</div>
-            <h2 style="font-family: var(--sans); font-size: clamp(22px, 6vw, 26px); font-weight: 800; color: var(--navy-deep); margin: 0; letter-spacing: -0.02em; line-height: 1.4; word-break: keep-all;">
-              자기관리 역량강화 사후진단
-            </h2>
-            <p style="font-size: 14px; color: var(--navy); font-weight: 600; margin: 6px 0 0;">(1/4)</p>
-          </div>
-
-          <div style="padding: 28px 16px; background: #f8fafc; border-radius: 16px; margin-bottom: 32px; font-size: 15px; line-height: 1.7; color: #475569; word-break: keep-all; text-align: center; border: 1px solid #e2e8f0; letter-spacing: -0.01em;">
-            안녕하세요.<br>
-            본 설문은 교육 프로그램 참여 이전 업무역량,<br>
-            자기 이해 및 재무관리 역량에 대한 이해도,<br>
-            업무 몰입 및 정서적 변화 등에 대한 경험을<br>
-            확인하기 위한 사후 조사입니다.<br><br>
-
-            <span style="display: block; font-size: 16px; font-weight: 800; color: var(--navy-deep); line-height: 1.6; margin: 20px 0;">
-              응답해주신 내용은 교육 효과 분석 및<br>
-              향후 프로그램 개선을 위한<br>
-              기초자료로만 활용되며,<br>
-              정답이 있는 문항이 아니므로<br>
-              편하게 응답해주시면 됩니다.
-            </span>
-
-            바쁘시겠지만 보다 나은 교육을 위해<br>
-            성실한 응답 부탁드립니다. 감사합니다.
-          </div>
-
-          <div class="scale-block">
-            <div class="scale-item">
-              <p class="item-label">소속 <span style="color:#e11d48;">*</span></p>
-              <input type="text" class="text-input required" name="post_dept" placeholder="소속을 입력해주세요">
-            </div>
-            <div class="scale-item" style="border-bottom:none; padding-bottom: 0;">
-              <p class="item-label">이름 <span style="color:#e11d48;">*</span></p>
-              <input type="text" class="text-input required" name="post_name" placeholder="이름을 입력해주세요">
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="slide" id="slide_post_2">
         <div class="movement">
-          <div class="m-head"><span class="m-num">02</span><span class="m-tag">자기관리 역량강화 사후진단 (2/4)</span><span class="m-rule"></span></div>
+          <div class="m-head"><span class="m-num">01</span><span class="m-tag">자기관리 역량강화 사후진단 (1/3)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">1. 진단도구를 통해(TA 진단 및 분석)을 통해 나의 심리적 성향과 대화 패턴을 객관적으로 명확히 이해하게 되었다.</p>
@@ -1334,7 +1278,7 @@
 
       <section class="slide" id="slide_post_3">
         <div class="movement">
-          <div class="m-head"><span class="m-num">03</span><span class="m-tag">자기관리 역량강화 사후진단 (3/4)</span><span class="m-rule"></span></div>
+          <div class="m-head"><span class="m-num">02</span><span class="m-tag">자기관리 역량강화 사후진단 (2/3)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">4. 본 과정을 통해 재직 기간 및 은퇴 이후의 삶에 대비하여 생애 목표와 재무 로드맵을 구체화하는데 도움이 되었다.</p>
@@ -1390,7 +1334,7 @@
 
       <section class="slide" id="slide_post_4">
         <div class="movement">
-          <div class="m-head"><span class="m-num">04</span><span class="m-tag">자기관리 역량강화 사후진단 (4/4)</span><span class="m-rule"></span></div>
+          <div class="m-head"><span class="m-num">03</span><span class="m-tag">자기관리 역량강화 사후진단 (3/3)</span><span class="m-rule"></span></div>
           <div class="scale-block">
             <div class="scale-item">
               <p class="item-label">7. 교육 내용을 바탕으로 향후 나의 자산관리 계획을 현업과 일상에서 즉시 실천할 수 있는 구체적인 실행 방안을 수립하는데 도움이 되었다.</p>
@@ -1521,15 +1465,15 @@
         return id === 'slide_intro' || id === 'slide_14' || id === 'slide_15' || id === 'slide_thankyou';
       });
     } else if (type === 'day23') {
-      activeSlides = allSlides.filter(s => {
+      const base = allSlides.filter(s => {
         const id = s.id;
         return id !== 'slide_14' && id !== 'slide_15' && !id.startsWith('slide_post_');
       });
-    } else if (type === 'post') {
-      activeSlides = allSlides.filter(s => {
-        const id = s.id;
-        return id === 'slide_intro' || id === 'slide_post_1' || id === 'slide_post_2' || id === 'slide_post_3' || id === 'slide_post_4' || id === 'slide_thankyou';
-      });
+      // 사후진단(9문항)을 맨 앞(설문 소개 다음)에 배치하고, 그 뒤에 참여동기~교육 만족도 문항이 이어지게 함
+      const postSlides = ['slide_post_2', 'slide_post_3', 'slide_post_4']
+        .map(id => allSlides.find(s => s.id === id))
+        .filter(Boolean);
+      activeSlides = [base[0], ...postSlides, ...base.slice(1)];
     } else {
       activeSlides = [allSlides[0]];
     }
@@ -1567,6 +1511,7 @@
     }
 
     prevBtn.disabled = false;
+    nextBtn.disabled = false;
 
     stepIndicator.textContent = currentIndex + ' / ' + (activeSlides.length - 2);
 

@@ -691,7 +691,7 @@
               <input type="hidden" name="q8_notice">
             </div>
             <div class="scale-item">
-              <p class="item-label">9. 외부 체험활동(하슬라아트월드, 아이엠브레드앤커피) 만족수준은 어떤가요?</p>
+              <p class="item-label">9. 외부 체험활동(하슬라아트월드 & 에이엠브레드앤커피) 만족수준은 어떤가요?</p>
               <div class="scale-dots">
                 <button type="button" class="scale-btn" value="1">1</button>
                 <button type="button" class="scale-btn" value="2">2</button>
@@ -1633,10 +1633,15 @@
     formData.append('survey_type', surveyTypeValue);
 
     fetch(scriptURL, { method:'POST', body: formData })
-      .then(() => {
-        submittingOverlay.classList.remove('active');
-        currentIndex++;
-        renderSlide();
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.status === 'success') {
+          submittingOverlay.classList.remove('active');
+          currentIndex++;
+          renderSlide();
+        } else {
+          throw new Error((data && data.message) || '제출 실패');
+        }
       })
       .catch(error => {
         console.error('Error!', error.message);
